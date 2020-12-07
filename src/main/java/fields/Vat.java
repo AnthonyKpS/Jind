@@ -13,7 +13,7 @@ public class Vat {
     }
 
     /**
-     * Checks if a number is a valid VAT number.
+     * Checks if a number is a valid Greek VAT number.
      *  Rule: A 9-digit block. | src: https://ec.europa.eu/taxation_customs/vies/faqvies.do
      * @param num Number to be checked.
      * @return True if the number is a valid VAT number.

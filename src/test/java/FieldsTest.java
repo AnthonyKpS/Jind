@@ -64,7 +64,7 @@ public class FieldsTest {
     public void homeAddressCheck() {
         boolean validity = false;
         System.out.print("Please provide a valid HOME address (e.g Kleopatras, 8): ");
-        HomeAddress homeAddress = null;
+        HomeAddress homeAddress;
         while (!validity) {
             String input = stdin.nextLine();
             System.out.println("");
@@ -107,16 +107,35 @@ public class FieldsTest {
             } catch (NumberFormatException e) {
                 System.out.println("Not a valid number.");
                 System.out.print("Please try again: ");
+            }
         }
     }
-}
+
+    // PHONE number check
+    public void phoneCheck() {
+        boolean validity = false;
+        String input;
+        System.out.print("Please provide a valid PHONE number (e.g 6971872193 or 2810325326): ");
+        while (!validity) {
+            input = stdin.nextLine();
+            System.out.println("");
+            try {
+                Phone phoneNumber = new Phone(input);
+                validity = true;
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+                System.out.print("Please try again: ");
+            }
+        }
+    }
 
     public static void main(String[] args) {
         FieldsTest test = new FieldsTest();
-        test.vatCheck();
-        test.idCheck();
-        test.emailAddressCheck();
-        test.homeAddressCheck();
-        test.statusCheck();
+//        test.vatCheck();
+//        test.idCheck();
+//        test.emailAddressCheck();
+//        test.homeAddressCheck();
+//        test.statusCheck();
+        test.phoneCheck();
     }
 }

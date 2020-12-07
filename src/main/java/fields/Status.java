@@ -13,4 +13,5 @@ public enum Status {
     public static boolean isStatusValid(int code) {
         return (code >= 0 && code <=2);
     }
+
 }
