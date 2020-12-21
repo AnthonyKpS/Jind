@@ -1,3 +1,5 @@
+package contracts;
+
 import fields.ContractDuration;
 import fields.MethodOfPayment;
 import fields.Phone;
@@ -7,7 +9,7 @@ import java.util.Date;
 
 public class Contract {
 
-    // Contract fields
+    // contracts.Contract fields
     private final String UUID = "CO" + java.util.UUID.randomUUID().toString(); // CO prefix for Contracts
 
     private Vat vatNumber;

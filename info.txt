@@ -1,0 +1,31 @@
+// Customer
+uuid
+vat o
+id o
+homeAddress o
+emailAddress o
+Status o
+
+
+//contracts.Contract
+uuid
+phone o
+vat o
+uuid customer o
+
+minutesToLandline
+minutesToMobile
+
+startDate
+duration (0 = 1 year, 1 = 2 year)
+fee
+isDigital
+methodOfPayment (0 = card, 1 = cash, 2 = deposit) o
+
+    //LandLine
+    typeOfConn (0 = no internet conn, 1 = adsl, 2 = vdsl) o
+    speed
+
+    //contracts.Mobile
+    dataAmount (0 = no data, > 0 has data this amount) o
+    smsAmount

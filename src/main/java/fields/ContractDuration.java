@@ -5,7 +5,7 @@ public enum ContractDuration {
     TWO_YEAR;
 
     /**
-     * Checks if a given Contract Duration is either of value 0 (=1 year contract)
+     * Checks if a given contracts.Contract Duration is either of value 0 (=1 year contract)
      * or 1 (=2 years contract)
      * @param duration Duration to be checked
      * @return true if Duration is valid

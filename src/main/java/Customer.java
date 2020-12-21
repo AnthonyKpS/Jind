@@ -1,3 +1,4 @@
+import contracts.Contract;
 import fields.*;
 
 import java.text.ParseException;
@@ -30,17 +31,19 @@ public class Customer {
 
         System.out.println("Let's add a new contract...");
 
-        // Inherit the correct VAT and UUID values to the new Contract.
-        contract = new Contract(vatNum, UUID);
-
         Scanner stdin = new Scanner(System.in);
         boolean validity = false;
         boolean uniqueness = false;
+
+        // Type of Contract
+        System.out.println("Please select a type of Contract (0 = Landline, 1 = Mobile): ");
+       // TODO: choose type of contract
 
         // Start filling the other fields.
 
         // Phone number
         System.out.print("Please provide a valid PHONE number (e.g 6971872199 or 2103253256): ");
+        validity = false;
         Phone phoneNumber = null;
         String input;
         while (!validity) {
@@ -73,7 +76,7 @@ public class Customer {
         }
         contract.setMinutesToLandline(minutesToLandline);
 
-        // Minutes to Landline
+        // Minutes to contracts.Landline
         System.out.print("Please provide minutes of talking to MOBILE: ");
         validity = false;
         int minutesToMobile = 0;
@@ -103,8 +106,8 @@ public class Customer {
         }
         contract.setStartDate(startDate);
 
-        // Contract duration
-        System.out.print("Please provide a valid Contract duration code (0 = 1year. 1 = 2years): ");
+        // contracts.Contract duration
+        System.out.print("Please provide a valid contracts.Contract duration code (0 = 1year. 1 = 2years): ");
         validity = false;
         ContractDuration contractDuration = null;
         while (!validity) {
@@ -168,8 +171,7 @@ public class Customer {
         }
 
         // type of contract
-        System.out.print("Choose your type of Contract (Landline or Mobile): ");
-
+        System.out.print("Choose your type of contracts.Contract (contracts.Landline or contracts.Mobile): ");
 
 
         return true;
